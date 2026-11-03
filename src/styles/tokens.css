@@ -1,0 +1,44 @@
+:root {
+  /* Colour — one family of browns on ivory, taken from the logo.
+     Kept deliberately soft: no pure black or bright white, so long reads stay easy on the eyes. */
+  --paper: #f6f0e6; /* page */
+  --sand: #ece3d5; /* quiet surfaces */
+  --ink: #3b2b21; /* text, 11.9:1 on paper */
+  --brand: #7c523a; /* logo brown: accents, links */
+  --muted: #6b5747; /* secondary text, 6:1 on paper */
+
+  /* One expressive accent (terracotta) plus two quiet supporting tones.
+     --accent is for large type and decoration; --accent-ink is the small-text version (5.3:1). */
+  --accent: #b45a3c;
+  --accent-ink: #9e4b2c;
+  --sage: #8b9a7b; /* decoration only */
+  --sage-ink: #5f6e52; /* sage for icons and small marks, 4.8:1 on paper */
+  --blush: #f0dccd; /* soft highlight surface */
+  --card: #fdfaf5; /* raised surfaces such as the inquiry form */
+  --rule: rgb(124 82 58 / 0.22);
+  --field-border: #9a806c; /* form field outline, 3.3:1 on paper */
+  --danger: #a1392b;
+  --success: #4f6b3e;
+
+  /* Type */
+  --font-display: "Bodoni Moda Variable", "Bodoni 72", Didot, "Times New Roman", serif;
+  --font-body: "Jost Variable", "Futura", "Century Gothic", system-ui, sans-serif;
+
+  --step--1: 0.875rem;
+  --step-0: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);
+  --step-1: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.3rem + 1.2vw, 2.4rem);
+  --step-3: clamp(2rem, 1.4rem + 2.4vw, 3.5rem);
+  --step-4: clamp(2.6rem, 1.6rem + 4vw, 5.5rem);
+
+  /* Space & layout */
+  --gutter: clamp(20px, 5vw, 72px);
+  --max: 1440px;
+  --section-y: clamp(96px, 12vw, 200px);
+  --header-h: 76px;
+  --radius: 2px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="1200" height="860">
+  <!-- Art-directed cover for the wedding invitation case study (no screenshots). -->
+  <rect width="1200" height="860" fill="#E9DCC8"/>
+  <rect x="0" y="620" width="1200" height="240" fill="#E2D2BB"/>
+
+  <!-- Paper invitation card, tilted, behind -->
+  <g transform="translate(250 120) rotate(-6)">
+    <rect x="8" y="12" width="420" height="600" rx="2" fill="#C9B399" opacity="0.55"/>
+    <path d="M0 600V210A210 210 0 0 1 420 210V600Z" fill="#FBF6EE"/>
+    <path d="M30 575V214A180 180 0 0 1 390 214V575Z" fill="none" stroke="#7C523A" stroke-width="1.5"/>
+    <path d="M44 562V216A166 166 0 0 1 376 216V562Z" fill="none" stroke="#7C523A" stroke-width="0.8" opacity="0.6"/>
+    <!-- sprig -->
+    <g fill="none" stroke="#7C523A" stroke-width="1.6" stroke-linecap="round">
+      <path d="M210 120C206 160 206 196 212 232"/>
+      <path d="M208 150C192 140 180 140 170 148C182 158 196 158 208 150Z" fill="#7C523A" opacity="0.85"/>
+      <path d="M209 176C226 166 238 166 248 174C236 184 222 184 209 176Z" fill="#7C523A" opacity="0.85"/>
+      <path d="M210 204C194 194 182 194 172 202C184 212 198 212 210 204Z" fill="#7C523A" opacity="0.85"/>
+    </g>
+    <!-- type lines -->
+    <g fill="#2E1E15">
+      <rect x="120" y="290" width="180" height="16" rx="1"/>
+      <rect x="186" y="324" width="48" height="30" rx="15" fill="none" stroke="#7C523A" stroke-width="2"/>
+      <rect x="140" y="374" width="140" height="16" rx="1"/>
+      <rect x="150" y="430" width="120" height="5" opacity="0.5"/>
+      <rect x="132" y="446" width="156" height="5" opacity="0.5"/>
+      <rect x="166" y="462" width="88" height="5" opacity="0.5"/>
+    </g>
+    <circle cx="210" cy="530" r="22" fill="#7C523A"/>
+    <circle cx="210" cy="530" r="14" fill="none" stroke="#E9C9A8" stroke-width="1.5"/>
+  </g>
+
+  <!-- Phone with the invitation on screen -->
+  <g transform="translate(700 150)">
+    <rect x="14" y="18" width="300" height="620" rx="44" fill="#2A1A12" opacity="0.18"/>
+    <rect x="0" y="0" width="300" height="620" rx="44" fill="#2A1A12"/>
+    <rect x="12" y="12" width="276" height="596" rx="34" fill="#F7EFE2"/>
+    <rect x="118" y="26" width="64" height="16" rx="8" fill="#2A1A12"/>
+    <!-- screen content -->
+    <path d="M40 330V170A110 110 0 0 1 260 170V330Z" fill="#7C523A"/>
+    <path d="M58 318V172A92 92 0 0 1 242 172V318Z" fill="none" stroke="#F4E2CC" stroke-width="1.2"/>
+    <g fill="#F4E2CC">
+      <rect x="104" y="206" width="92" height="9"/>
+      <rect x="132" y="226" width="36" height="20" rx="10" fill="none" stroke="#F4E2CC" stroke-width="1.4"/>
+      <rect x="112" y="256" width="76" height="9"/>
+    </g>
+    <g fill="#2E1E15">
+      <rect x="64" y="364" width="172" height="10"/>
+      <rect x="44" y="392" width="212" height="4" opacity="0.45"/>
+      <rect x="44" y="404" width="196" height="4" opacity="0.45"/>
+      <rect x="44" y="416" width="204" height="4" opacity="0.45"/>
+      <rect x="44" y="428" width="140" height="4" opacity="0.45"/>
+    </g>
+    <g>
+      <rect x="44" y="458" width="100" height="76" rx="2" fill="#E9DCC8"/>
+      <rect x="156" y="458" width="100" height="76" rx="2" fill="#E9DCC8"/>
+      <rect x="58" y="474" width="40" height="18" fill="#7C523A"/>
+      <rect x="58" y="500" width="70" height="4" fill="#2E1E15" opacity="0.5"/>
+      <rect x="170" y="474" width="40" height="18" fill="#7C523A"/>
+      <rect x="170" y="500" width="70" height="4" fill="#2E1E15" opacity="0.5"/>
+    </g>
+    <rect x="44" y="552" width="212" height="34" rx="2" fill="#2E1E15"/>
+    <rect x="116" y="566" width="68" height="6" fill="#F7EFE2"/>
+  </g>
+</svg>

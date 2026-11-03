@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" width="1000" height="1200">
+  <!-- Art-directed cover for Ruang Kita ("our space"): rooms opening into rooms. -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="62%" r="55%">
+      <stop offset="0" stop-color="#F6DDB8"/>
+      <stop offset="1" stop-color="#E6B887"/>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="1200" fill="#3A271C"/>
+  <!-- floor -->
+  <path d="M0 1200L340 790H660L1000 1200Z" fill="#2A1A12"/>
+  <!-- receding doorways -->
+  <g fill="none" stroke="#C9A27F">
+    <path d="M110 1200V420A390 390 0 0 1 890 420V1200" stroke-width="2.2"/>
+    <path d="M190 1102V470A310 310 0 0 1 810 470V1102" stroke-width="1.8" opacity="0.85"/>
+    <path d="M258 1020V512A242 242 0 0 1 742 512V1020" stroke-width="1.5" opacity="0.7"/>
+    <path d="M314 952V548A186 186 0 0 1 686 548V952" stroke-width="1.2" opacity="0.55"/>
+  </g>
+  <!-- innermost room, lit -->
+  <path d="M360 890V580A140 140 0 0 1 640 580V890Z" fill="url(#glow)"/>
+  <!-- two figures as simple forms, sharing the space -->
+  <g fill="#3A271C">
+    <circle cx="468" cy="742" r="17"/>
+    <path d="M444 890V792C444 772 456 762 468 762C480 762 492 772 492 792V890Z"/>
+    <circle cx="534" cy="750" r="15"/>
+    <path d="M513 890V798C513 780 523 770 534 770C545 770 555 780 555 798V890Z"/>
+  </g>
+  <!-- small frames on the walls: memories kept in the room -->
+  <g fill="none" stroke="#C9A27F" stroke-width="1.4" opacity="0.8">
+    <rect x="34" y="560" width="46" height="60"/>
+    <rect x="34" y="650" width="46" height="34"/>
+    <rect x="920" y="590" width="46" height="60"/>
+  </g>
+  <path d="M340 790H660" stroke="#C9A27F" stroke-width="1" opacity="0.4"/>
+</svg>

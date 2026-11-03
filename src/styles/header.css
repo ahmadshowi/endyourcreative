@@ -1,0 +1,251 @@
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  height: var(--header-h);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 100%;
+  max-width: calc(var(--max) + var(--gutter) * 2);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+  border-radius: 0;
+  transition:
+    max-width 0.6s var(--ease-out),
+    height 0.6s var(--ease-out),
+    margin 0.6s var(--ease-out),
+    padding 0.6s var(--ease-out),
+    border-radius 0.6s var(--ease-out),
+    background-color 0.4s,
+    box-shadow 0.4s,
+    color 0.3s;
+}
+
+/* Once the page moves, the bar gathers into a dark floating pill so it stays
+   easy to find against every section below. */
+.site-header.is-scrolled .site-header__inner {
+  max-width: min(1120px, calc(100% - 2 * clamp(12px, 2.5vw, 32px)));
+  height: 60px;
+  margin-top: 10px;
+  padding-inline: clamp(18px, 2.4vw, 28px);
+  border-radius: 999px;
+  background: rgb(59 43 33 / 0.94);
+  box-shadow: 0 18px 40px -22px rgb(59 43 33 / 0.6);
+  color: var(--paper);
+}
+
+@supports (backdrop-filter: blur(8px)) {
+  .site-header.is-scrolled .site-header__inner {
+    background: rgb(59 43 33 / 0.86);
+    backdrop-filter: blur(12px);
+  }
+}
+
+.site-header.is-scrolled .nav__whatsapp {
+  --bg: var(--accent-ink);
+  --fill: #8a3f24;
+}
+
+.brand {
+  position: relative;
+  z-index: 2;
+  display: block;
+  flex: none;
+  /* 44px tap target around the 26px mark */
+  padding-block: 9px;
+}
+
+.brand img {
+  width: auto;
+  height: 26px;
+  transition: opacity 0.4s;
+}
+
+.brand__cream {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  opacity: 0;
+}
+
+.is-scrolled .brand__ink {
+  opacity: 0;
+}
+
+.is-scrolled .brand__cream {
+  opacity: 1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 44px);
+}
+
+.nav__list {
+  display: flex;
+  gap: clamp(18px, 2.4vw, 36px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list a {
+  position: relative;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  padding-block: 6px;
+}
+
+.nav__list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s var(--ease-out);
+}
+
+.nav__list a:hover::after,
+.nav__list a[aria-current]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    padding: 0 4px;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: 500 0.9375rem var(--font-body);
+    cursor: pointer;
+  }
+
+  .menu-toggle__lines {
+    display: grid;
+    gap: 6px;
+    width: 26px;
+  }
+
+  .menu-toggle__lines span {
+    height: 1.5px;
+    background: currentColor;
+    transition: transform 0.4s var(--ease-out);
+  }
+
+  .is-open .menu-toggle__lines span:first-child {
+    transform: translateY(3.75px) rotate(45deg);
+  }
+
+  .is-open .menu-toggle__lines span:last-child {
+    transform: translateY(-3.75px) rotate(-45deg);
+  }
+
+  .nav {
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: calc(var(--header-h) + 32px) var(--gutter) 48px;
+    background: var(--paper);
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      opacity 0.35s var(--ease-out),
+      visibility 0s linear 0.35s;
+  }
+
+  .is-open .nav {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.35s var(--ease-out);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .nav__list a {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 9vw, 3.4rem);
+    line-height: 1.15;
+  }
+
+  .nav__list a::after {
+    bottom: 4px;
+  }
+
+  .nav__whatsapp {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .nav__list li {
+    transform: translateY(16px);
+    opacity: 0;
+    transition:
+      transform 0.5s var(--ease-out),
+      opacity 0.5s var(--ease-out);
+  }
+
+  .is-open .nav__list li {
+    transform: none;
+    opacity: 1;
+  }
+
+  .is-open .nav__list li:nth-child(2) { transition-delay: 0.04s; }
+  .is-open .nav__list li:nth-child(3) { transition-delay: 0.08s; }
+  .is-open .nav__list li:nth-child(4) { transition-delay: 0.12s; }
+  .is-open .nav__list li:nth-child(5) { transition-delay: 0.16s; }
+}
+
+/* With the mobile menu open the pill steps aside: the bar goes back to full
+   width on paper. (A backdrop-filter would also trap the fixed menu inside it.) */
+.site-header.is-open {
+  background: var(--paper);
+}
+
+.site-header.is-open .site-header__inner {
+  max-width: calc(var(--max) + var(--gutter) * 2);
+  height: 100%;
+  margin-top: 0;
+  padding-inline: var(--gutter);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  color: var(--ink);
+  transition: none;
+}
+
+.is-open .brand__ink {
+  opacity: 1;
+}
+
+.is-open .brand__cream {
+  opacity: 0;
+}
