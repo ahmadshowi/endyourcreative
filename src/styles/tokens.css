@@ -3,9 +3,9 @@
      Kept deliberately soft: no pure black or bright white, so long reads stay easy on the eyes. */
   --paper: #f6f0e6; /* page */
   --sand: #ece3d5; /* quiet surfaces */
-  --ink: #3b2b21; /* text, 11.9:1 on paper */
+  --ink: #5e3d2b; /* headings, labels, buttons — a warm logo brown, 8.5:1 on paper */
   --brand: #7c523a; /* logo brown: accents, links */
-  --muted: #6b5747; /* secondary text, 6:1 on paper */
+  --muted: #735e4e; /* body copy, 5.4:1 on paper, 4.6:1 on blush */
 
   /* One expressive accent (terracotta) plus two quiet supporting tones.
      --accent is for large type and decoration; --accent-ink is the small-text version (5.3:1). */
