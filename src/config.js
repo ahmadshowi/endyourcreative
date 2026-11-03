@@ -1,7 +1,7 @@
 // Studio contact settings. Values come from Vite env variables (see .env.example).
 
-/** WhatsApp number in international format, digits only, e.g. 6281234567890. */
-export const WHATSAPP_NUMBER = (import.meta.env.VITE_WHATSAPP_NUMBER || "").replace(/\D/g, "");
+/** WhatsApp number in international format, digits only. VITE_WHATSAPP_NUMBER overrides the studio's own. */
+export const WHATSAPP_NUMBER = (import.meta.env.VITE_WHATSAPP_NUMBER || "6282299417885").replace(/\D/g, "");
 
 /** Endpoint the inquiry form posts to. Defaults to the bundled Vercel function. */
 export const INQUIRY_ENDPOINT = import.meta.env.VITE_INQUIRY_ENDPOINT || "/api/inquiry";

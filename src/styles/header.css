@@ -137,7 +137,7 @@
     border: 0;
     background: none;
     color: inherit;
-    font: 500 0.9375rem var(--font-body);
+    font: 600 0.9375rem var(--font-body);
     cursor: pointer;
   }
 

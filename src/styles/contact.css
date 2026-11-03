@@ -48,6 +48,23 @@
   margin-top: 40px;
 }
 
+.contact__alt {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.contact__alt a,
+.site-footer__small a {
+  color: var(--ink);
+  text-underline-offset: 3px;
+}
+
+.contact__alt a:hover,
+.site-footer__small a:hover {
+  color: var(--accent-ink);
+}
+
 /* ---------- Inquiry form: a light card lifted off the ground ---------- */
 
 .inquiry {
@@ -82,12 +99,12 @@
 
 .field label {
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .field__optional {
   color: var(--muted);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .field input,
@@ -193,7 +210,7 @@
 
 .inquiry__status a {
   color: var(--ink);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media (max-width: 900px) {
@@ -263,6 +280,10 @@
 
 .site-footer__small {
   grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
   padding-top: 24px;
   border-top: 1px solid var(--rule);
   font-size: 0.875rem;

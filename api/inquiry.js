@@ -4,12 +4,12 @@
  * Validates a project inquiry and emails it to the studio through Resend's
  * HTTP API (no SDK dependency). Required environment variables:
  *   RESEND_API_KEY      API key from https://resend.com
- *   INQUIRY_TO_EMAIL    Where inquiries are delivered (the studio inbox)
  * Optional:
+ *   INQUIRY_TO_EMAIL    Where inquiries are delivered. Defaults to the studio inbox.
  *   INQUIRY_FROM_EMAIL  Verified sender, e.g. "END. YOURCREATIVE <hello@yourdomain.com>"
  *                       Defaults to Resend's onboarding sender for testing.
  *
- * Without the required variables the function answers 503, and the site
+ * Without RESEND_API_KEY the function answers 503, and the site
  * offers the visitor a pre-filled WhatsApp message instead.
  */
 
@@ -67,9 +67,10 @@ export default async function handler(req, res) {
   const { data, errors } = validateInquiry(body);
   if (Object.keys(errors).length) return res.status(400).json({ ok: false, errors });
 
-  const { RESEND_API_KEY, INQUIRY_TO_EMAIL } = process.env;
+  const { RESEND_API_KEY } = process.env;
+  const INQUIRY_TO_EMAIL = process.env.INQUIRY_TO_EMAIL || "ahmadshowi15@gmail.com";
   const from = process.env.INQUIRY_FROM_EMAIL || "END. YOURCREATIVE <onboarding@resend.dev>";
-  if (!RESEND_API_KEY || !INQUIRY_TO_EMAIL) {
+  if (!RESEND_API_KEY) {
     return res.status(503).json({ ok: false, code: "not_configured" });
   }
 

@@ -72,7 +72,7 @@
   border-bottom: 1px solid var(--rule);
   background: #efe6da;
   color: var(--muted);
-  font: 500 0.6875rem/1 var(--font-body);
+  font: 600 0.6875rem/1 var(--font-body);
 }
 
 .browser__bar i {
@@ -134,7 +134,7 @@
 .case__kind {
   color: var(--brand);
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.02em;
 }
 
